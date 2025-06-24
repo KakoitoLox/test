@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-    <title>Генераторная</title>
+    <meta charset="UTF-8">
+    <title>Р“РµРЅРµСЂР°С‚РѕСЂРЅР°СЏ</title>
     <style>
         html {
             height: 100%;
@@ -10,7 +11,6 @@
 
         body {
             background: linear-gradient(90deg, #2c3e50, #3a536b, #54708e, #708dae );
-           
             margin: 0;
             padding: 0;
             display: flex;
@@ -99,7 +99,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 100px auto; /* Центрирование карточки */
+            margin: 100px auto; /* Р¦РµРЅС‚СЂРёСЂРѕРІР°РЅРёРµ РєР°СЂС‚РѕС‡РєРё */
             overflow: hidden;
         }
 
@@ -166,42 +166,42 @@
 <body>
     <div class="home-button">
         <a href="../index.html" class="main-button">
-            <img src="img/icon-dnd.svg" alt="Главная">
+            <img src="img/icon-dnd.svg" alt="Р“Р»Р°РІРЅР°СЏ">
         </a>
     </div>
 
     <nav class="image-menu">
         <ul>
-            <li><a href="base.html"><img src="img/system-icon.svg" alt="Основы"><span>Основы</span></a></li>
-            <li><a href="systems.html"><img src="img/site-icon.svg" alt="Системы"><span>Системы</span></a></li>
-            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Генератор"><span>Генератор</span></a></li>
-            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Загрузить"><span>Загрузить</span></a></li>
+            <li><a href="base.html"><img src="img/system-icon.svg" alt="РћСЃРЅРѕРІС‹"><span>РћСЃРЅРѕРІС‹</span></a></li>
+            <li><a href="systems.html"><img src="img/site-icon.svg" alt="РЎРёСЃС‚РµРјС‹"><span>РЎРёСЃС‚РµРјС‹</span></a></li>
+            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Р“РµРЅРµСЂР°С‚РѕСЂ"><span>Р“РµРЅРµСЂР°С‚РѕСЂ</span></a></li>
+            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Р—Р°РіСЂСѓР·РёС‚СЊ"><span>Р—Р°РіСЂСѓР·РёС‚СЊ</span></a></li>
         </ul>
     </nav>
 
     <div class="loot-generator-card">
         <div class="card-header">
-            <h1>Генератор Лута</h1>
+            <h1>Р“РµРЅРµСЂР°С‚РѕСЂ Р›СѓС‚Р°</h1>
         </div>
         <div class="card-body">
             <div class="input-group">
-                <label for="level">Уровень:</label>
+                <label for="level">РЈСЂРѕРІРµРЅСЊ:</label>
                 <input type="number" id="level" value="1" min="1" max="30">
             </div>
             <div class="input-group">
-                <label for="rarity">Редкость:</label>
+                <label for="rarity">Р РµРґРєРѕСЃС‚СЊ:</label>
                 <select id="rarity">
-                    <option value="common">Обычный</option>
-                    <option value="uncommon">Необычный</option>
-                    <option value="rare">Редкий</option>
+                    <option value="common">РћР±С‹С‡РЅС‹Р№</option>
+                    <option value="uncommon">РќРµРѕР±С‹С‡РЅС‹Р№</option>
+                    <option value="rare">Р РµРґРєРёР№</option>
                 </select>
             </div>
-            <button id="generateButton">Сгенерировать Лут</button>
+            <button id="generateButton">РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ Р›СѓС‚</button>
         </div>
         <div class="card-footer">
             <div id="lootResult">
                 <span class="loot-result-text">
-                    <!-- Здесь будет отображаться сгенерированный лут -->
+                    <!-- Р—РґРµСЃСЊ Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ Р»СѓС‚ -->
                 </span>
             </div>
         </div>

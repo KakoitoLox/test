@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-    <title>Системы НРИ</title>
+    <meta charset="UTF-8">
+    <title>РЎРёСЃС‚РµРјС‹ РќР Р</title>
     <style>
         body {
             background: linear-gradient(45deg, #2c3e50, #3a536b, #54708e, #708dae );
@@ -13,7 +14,7 @@
             min-height: 100vh;
             flex-direction: column;
         }
-    
+
         .image-menu {
             position: fixed;
             top: 20px;
@@ -62,7 +63,7 @@
                     color: white;
                 }
 
-      
+
 
         .home-button {
             position: absolute;
@@ -80,20 +81,20 @@
             display: block;
         }
 
-        /* Контейнер для карточек */
+        /* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РєР°СЂС‚РѕС‡РµРє */
         .rule-cards-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* Расстояние между карточками */
+            gap: 20px; /* Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РєР°СЂС‚РѕС‡РєР°РјРё */
             justify-content: center;
             padding: 20px 0;
         }
 
-        /* Стили для каждой карточки */
+        /* РЎС‚РёР»Рё РґР»СЏ РєР°Р¶РґРѕР№ РєР°СЂС‚РѕС‡РєРё */
         .rule-card {
-            flex: 1 1 calc(33.33% - 20px); /* 3 карточки в ряд с учетом gap */
-            min-width: 300px; /* Минимальная ширина карточки */
-            max-width: 400px; /* Максимальная ширина */
+            flex: 1 1 calc(33.33% - 20px); /* 3 РєР°СЂС‚РѕС‡РєРё РІ СЂСЏРґ СЃ СѓС‡РµС‚РѕРј gap */
+            min-width: 300px; /* РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° РєР°СЂС‚РѕС‡РєРё */
+            max-width: 400px; /* РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° */
             display: flex;
             flex-direction: column;
             background: rgba(20, 20, 20, 0.9);
@@ -101,7 +102,7 @@
             border-radius: 12px;
             padding: 20px;
             margin: 10px;
-            box-sizing: border-box; /* Чтобы padding не ломал расчеты */
+            box-sizing: border-box; /* Р§С‚РѕР±С‹ padding РЅРµ Р»РѕРјР°Р» СЂР°СЃС‡РµС‚С‹ */
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -124,7 +125,6 @@
 
         .rule-card__content {
             flex: 1;
-            
         }
 
         .rule-card__title {
@@ -165,16 +165,16 @@
 <body>
     <div class="home-button">
         <a href="../index.html" class="main-button">
-            <img src="img/icon-dnd.svg" alt="Главная">
+            <img src="img/icon-dnd.svg" alt="Р“Р»Р°РІРЅР°СЏ">
         </a>
     </div>
 
     <nav class="image-menu">
         <ul>
-            <li><a href="base.html"><img src="img/system-icon.svg" alt="Основы"><span>Основы</span></a></li>
-            <li><a href="systems.html"><img src="img/site-icon.svg" alt="Системы"><span>Системы</span></a></li>
-            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Генератор"><span>Генератор</span></a></li>
-            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Загрузить"><span>Загрузить</span></a></li>
+            <li><a href="base.html"><img src="img/system-icon.svg" alt="РћСЃРЅРѕРІС‹"><span>РћСЃРЅРѕРІС‹</span></a></li>
+            <li><a href="systems.html"><img src="img/site-icon.svg" alt="РЎРёСЃС‚РµРјС‹"><span>РЎРёСЃС‚РµРјС‹</span></a></li>
+            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Р“РµРЅРµСЂР°С‚РѕСЂ"><span>Р“РµРЅРµСЂР°С‚РѕСЂ</span></a></li>
+            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Р—Р°РіСЂСѓР·РёС‚СЊ"><span>Р—Р°РіСЂСѓР·РёС‚СЊ</span></a></li>
         </ul>
     </nav>
 
@@ -186,11 +186,11 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">D&D 5th Edition</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
                 <div class="rule-card__links">
-                    <a href="https://dungeonsanddragons.ru/bookfull/5ed/5e%20Players%20Handbook%20-%20Книга%20игрока%20RUS.pdf " target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://www.dndbeyond.com/srd" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://www.dndbeyond.com/" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://dungeonsanddragons.ru/bookfull/5ed/5e%20Players%20Handbook%20-%20РљРЅРёРіР°%20РёРіСЂРѕРєР°%20RUS.pdf " target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://www.dndbeyond.com/srd" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://www.dndbeyond.com/" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>
@@ -202,12 +202,12 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">Pathfinder 2e</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
 
                 <div class="rule-card__links">
-                    <a href="https://paizo.com/pathfinder" target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://pf2e-ru-translation.readthedocs.io/ru/latest/" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://2e.aonprd.com/?AspxAutoDetectCookieSupport=1" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://paizo.com/pathfinder" target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://pf2e-ru-translation.readthedocs.io/ru/latest/" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://2e.aonprd.com/?AspxAutoDetectCookieSupport=1" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>
@@ -218,12 +218,12 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">Call of Cthulhu</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
 
                 <div class="rule-card__links">
-                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://vk.com/call_of_cthulhu_rpg" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://vk.com/call_of_cthulhu_rpg" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>
@@ -236,12 +236,12 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">Warhammer 40,000 Roleplay</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
 
                 <div class="rule-card__links">
-                    <a href="https://cubicle7games.com/warhammer-40-000-roleplay-imperium-maledictum?srsltid=AfmBOopa5eBnMOEvIDtCHLEznEWrA2wXEA5TSJWJIG597zl7NIGXbLhG" target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://rpg.fandom.com/ru/wiki/Warhammer_40K_Roleplay" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://cubicle7games.com/" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://cubicle7games.com/warhammer-40-000-roleplay-imperium-maledictum?srsltid=AfmBOopa5eBnMOEvIDtCHLEznEWrA2wXEA5TSJWJIG597zl7NIGXbLhG" target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://rpg.fandom.com/ru/wiki/Warhammer_40K_Roleplay" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://cubicle7games.com/" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>
@@ -252,12 +252,12 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">Fate Core System</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
 
                 <div class="rule-card__links">
-                    <a href="https://evilhat.com/product/fate-core-system/" target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://fate-srd.com/" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/3853/fate-core" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://evilhat.com/product/fate-core-system/" target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://fate-srd.com/" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/3853/fate-core" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>
@@ -268,12 +268,12 @@
             </div>
             <div class="rule-card__content">
                 <h3 class="rule-card__title">Kids on Bikes</h3>
-                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <p class="rule-card__desc">РћС„РёС†РёР°Р»СЊРЅС‹Рµ РїСЂР°РІРёР»Р° Р±Р°Р·РѕРІРѕР№ РјРµС…Р°РЅРёРєРё Рё СЃРѕР·РґР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р¶РµР№</p>
 
                 <div class="rule-card__links">
-                    <a href="https://www.drivethrurpg.com/en/product/231938/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">Основные правила </a>
-                    <a href="https://www.huntersentertainment.com/kidsonbikesrpg" target="_blank" class="rule-card__btn">SRD на русском</a>
-                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/4718/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                    <a href="https://www.drivethrurpg.com/en/product/231938/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">РћСЃРЅРѕРІРЅС‹Рµ РїСЂР°РІРёР»Р° </a>
+                    <a href="https://www.huntersentertainment.com/kidsonbikesrpg" target="_blank" class="rule-card__btn">SRD РЅР° СЂСѓСЃСЃРєРѕРј</a>
+                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/4718/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">РћРЅР»Р°Р№РЅ-РєРѕРјРїРµРЅРґРёСѓРј</a>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <style>
-       
+
         footer {
             margin-top: auto;
             background: #333;
@@ -15,26 +16,25 @@
             bottom: 0;
             position: fixed;
         }
-      
     </style>
 
 </head>
 <body>
     <footer>
-        Сайт сделал Дурягин Егор. Все права защищены © 2025.
+        РЎР°Р№С‚ СЃРґРµР»Р°Р» Р”СѓСЂСЏРіРёРЅ Р•РіРѕСЂ. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹ В© 2025.
         
     </footer>  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const frame = document.getElementById('footer-frame');
 
-            // Обработчик загрузки контента в iframe
+            // РћР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё РєРѕРЅС‚РµРЅС‚Р° РІ iframe
             frame.addEventListener('load', function () {
                 try {
                     const contentHeight = this.contentWindow.document.body.scrollHeight;
                     this.style.height = contentHeight + 'px';
                 } catch (e) {
-                    console.error('Ошибка доступа к iframe:', e);
+                    console.error('РћС€РёР±РєР° РґРѕСЃС‚СѓРїР° Рє iframe:', e);
                 }
             });
         });
