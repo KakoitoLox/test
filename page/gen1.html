@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <title>Генератор D&D встреч</title>
+    <style>
+        body {
+            font-family: "Cormorant Unicase",sans-serif;
+             max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .generator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-left: 4px solid #4CAF50;
+        }
+
+        select {
+            padding: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="generator">
+        <h1>Генератор случайных D&D встреч</h1>
+        <label for="difficulty">Выберите сложность:</label>
+        <select id="difficulty">
+            <option value="easy">Легкая</option>
+            <option value="medium">Средняя</option>
+            <option value="hard">Сложная</option>
+        </select>
+        <button onclick="generateEncounter()">Сгенерировать встречу</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const locations = {
+            easy: ['Старая дорога', 'Заброшенная мельница', 'Лесная опушка', 'Деревенская таверна','Место битвы'],
+            medium: ['Гробница древнего короля', 'Проклятый храм', 'Подземные туннели', 'Магическая лаборатория'],
+            hard: ['Логово красного дракона', 'Развалины демонического алтаря', 'Планарный разлом', 'Город вампиров']
+        };
+
+        const events = {
+            easy: ['засада', 'просьба о помощи', 'торговец с странными товарами', 'таинственный незнакомец'],
+            medium: ['магический портал', 'проклятое сокровище', 'ритуальный круг', 'пленники монстров'],
+            hard: ['древнее пророчество', 'вторжение из других миров', 'пробуждение божества', 'эпидемия зомби']
+        };
+
+        const creatures = {
+            easy: ['Гоблины', 'Бандиты', 'Волки', 'Гигантские пауки', 'Ветвистая зараза', 'Багбир', 'Глубинник','Вурдалак'],
+            medium: ['Огры', 'Лич', 'Минотавр', 'Элементали', 'Акулотелое отродье', 'Большой мимик', 'Дитя лавы','Жаболюд-рыцарь'],
+            hard: ['Дракон', 'Демон', 'Вампир', 'Бехолдер', 'Грибной слуга', 'Злой угнетённый', 'Безумный маг с горы Бараток','Вестник бури']
+        };
+
+        function getRandom(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function generateEncounter() {
+            const difficulty = document.getElementById('difficulty').value;
+            const location = getRandom(locations[difficulty]);
+            const event = getRandom(events[difficulty]);
+            const creature = getRandom(creatures[difficulty]);
+
+            const treasure = difficulty === 'easy' ? '1d6 золотых монет и простой магический предмет' :
+                            difficulty === 'medium' ? '2d10 золотых и редкий артефакт' :
+                            '3d20 золотых и легендарный артефакт';
+
+            const result = `
+                <h3>Сгенерированная встреча (${difficulty}):</h3>
+                <p><strong>Локация:</strong> ${location}</p>
+                <p><strong>Событие:</strong> ${event}</p>
+                <p><strong>Существа:</strong> ${creature}</p>
+                <p><strong>Сокровище:</strong> ${treasure}</p>
+                <p><strong>Особенности:</strong> ${Math.random() > 0.5 ? 'Есть ловушки' : 'Есть загадки/головоломки'}</p>
+            `;
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

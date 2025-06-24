@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Загрузочная</title>
+    <style>
+        body {
+            background: linear-gradient(0deg, #2c3e50, #3a536b, #54708e, #708dae);
+            background-size: 400% 400%;
+            animation: gradientRotation 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Cormorant Garamond', sans-serif;
+            display: flex;
+            flex-direction: column; /* Главное направление - колонка */
+        }
+
+        @keyframes gradientRotation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .image-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+            .image-menu ul {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+                justify-content: center;
+            }
+
+            .image-menu a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                padding: 15px;
+                background: #f5f5f5;
+                border-radius: 10px;
+                transition: all 0.3s;
+            }
+
+            .image-menu img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 8px;
+            }
+
+            .image-menu span {
+                color: #2c3e50;
+                font-family: 'Oswald', serif;
+                font-size: 14px;
+            }
+
+            .image-menu a:hover {
+                background: #3498db;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+                .image-menu a:hover span {
+                    color: white;
+                }
+
+        .home-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+            .home-button:hover {
+                transform: translateY(-3px);
+            }
+
+        .main-button img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        .rule-cards-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        :root {
+            --gold: #FFD700;
+            --parchment: #F0E6D2;
+            --blood-red: #8B0000;
+        }
+        .content-wrapper {
+            flex: 1 0 auto; /* Занимает все доступное пространство */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+        .rule-card {
+            position: relative; 
+            display: flex;
+            width: 350px;
+            min-height: 400px;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px;
+            color: var(--parchment);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/dnd-pic.jpg') center;
+        }
+
+        .card-2 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/pathfinder-cover.jpg') center;
+        }
+
+        .card-3 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/waha-cover.jpg') center;
+        }
+
+        .card-4 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/cthulhu-cover.jpg') center;
+        }
+
+        .card-5 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/fate-cover.jpg') center;
+        }
+
+        .card-6 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('img/bike-cover.jpg') center;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-10px) rotateZ(2deg);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .system-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+            display: block;
+        }
+
+        .card-title {
+            font-family: 'Merriweather', cursive;
+            font-size: 1.8em;
+            margin: 0 0 15px;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-meta {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-description {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--blood-red);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative; 
+            z-index: 10; 
+        }
+
+            .download-btn:hover {
+                background: #6B0000;
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+            }
+
+        .file-size {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            z-index: 3;
+        }
+
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+            background: white;
+            padding: 20px;
+            border: 3px solid #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .form-container {
+            max-width: 400px;
+            padding: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+            .btn.cancel {
+                background-color: #ff4444;
+            }
+
+        body.modal-open::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 8;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            flex-shrink: 0; /* Не сжимается */
+            box-sizing: border-box;
+            position: relative; /* Обычное позиционирование */
+            z-index: 10; /* Для формы отзывов */
+            margin-top: auto; /* Прижимается к низу */
+        }
+    </style>
+</head>
+<body>
+    <div class="home-button">
+        <a href="../index.html" class="main-button">
+            <img src="img/icon-dnd.svg" alt="Главная">
+        </a>
+    </div>
+
+    <nav class="image-menu">
+        <ul>
+            <li><a href="base.html"><img src="img/system-icon.svg" alt="Основы"><span>Основы</span></a></li>
+            <li><a href="systems.html"><img src="img/site-icon.svg" alt="Системы"><span>Системы</span></a></li>
+            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Генератор"><span>Генератор</span></a></li>
+            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Загрузить"><span>Загрузить</span></a></li>
+        </ul>
+    </nav>
+    <div class="content-wrapper">
+        <div class="rule-cards-container">
+            <div class="card-group">
+                <article class="rule-card card-1">
+                    <span class="file-size">40.3 MB</span>
+                    <div class="card-content">
+                        <img src="img/dnd-icon.svg"
+                             alt="Логотип Dungeons & Dragons"
+                             class="system-logo">
+                        <h2 class="card-title">Dungeons & Dragons 5e</h2>
+                        <div class="card-meta">
+                            <span>Версия 5e</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://dungeonsanddragons.ru/bookfull/5ed/5e%20Players%20Handbook%20-%20Книга%20игрока%20RUS.pdf"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Загрузить правила
+                        </a>
+                    </div>
+                </article>
+
+                <article class="rule-card card-2">
+                    <span class="file-size">24.8 MB</span>
+                    <div class="card-content">
+                        <img src="img/P.png"
+                             alt="Логотип Pathfinder"
+                             class="system-logo">
+                        <h2 class="card-title">Pathfinder 2e</h2>
+                        <div class="card-meta">
+                            <span>Версия 2e</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1tO8lVBe_CFHs1OW5Rs9Hhwhn4UR6Qxw-/view"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Загрузить правила
+                        </a>
+                    </div>
+                </article>
+
+                <article class="rule-card card-3">
+                    <span class="file-size">58.7 MB</span>
+                    <div class="card-content">
+                        <img src="img/waha-logo.png"
+                             alt="Логотип Warhammer 40,000 Roleplay"
+                             class="system-logo">
+                        <h2 class="card-title">Warhammer 40,000 Roleplay</h2>
+                        <div class="card-meta">
+                            <span>Dark Heresy</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://drive.google.com/drive/folders/1FeNw9UFXLV4aiQoR_scdVIVT8anYk84N"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Загрузить правила
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="card-group">
+                <article class="rule-card card-4">
+                    <span class="file-size">68.5 MB</span>
+                    <div class="card-content">
+                        <img src="img/ctulhu-logo.png"
+                             alt="Логотип Call of Cthulhu"
+                             class="system-logo">
+                        <h2 class="card-title">Call of Cthulhu</h2>
+                        <div class="card-meta">
+                            <span>Версия 7</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://vk.com/doc30415554_599872263?hash=GagT3i0AbQuGewrhg10JtZMFSEzzr4mzZ4mZ5ZqUMCc&dl=Fo3BJZK8gMpkm7Mx11UGW1eNHzUxe86Leh57wvGa36P"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Загрузить правила
+                        </a>
+                    </div>
+                </article>
+
+                <article class="rule-card card-5">
+                    <span class="file-size">42.3 MB</span>
+                    <div class="card-content">
+                        <img src="img/fate-logo.png"
+                             alt="Логотип Fate Core System"
+                             class="system-logo">
+                        <h2 class="card-title">Fate Core System</h2>
+                        <div class="card-meta">
+                            <span>Версия Core System</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FLXEvGNa3D%2Fi7f5t8MTkDVS9JX7EpxFWsySJvXUVJv6AOATHFoGT%2FOJ8%2Bxh9qJlZ6q%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2FFATE%20rulebooks%2FFate%20Core%20System%20RU.pdf&name=Fate%20Core%20System%20RU.pdf&nosw=1"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Загрузить правила
+                        </a>
+                    </div>
+                </article>
+
+                <article class="rule-card card-6">
+                    <span class="file-size">13.41 MB</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kids on Bikes</h2>
+                        <div class="card-meta">
+                            <span>Second Edition</span>
+                            <span>Обновлено: 09.05.2025</span>
+                        </div>
+                        <p class="card-description">
+                            Полное руководство по базовой механике игры, созданию персонажей
+                            и основам магической системы. Включает все необходимые таблицы
+                            и примеры использования правил.
+                        </p>
+                        <a href="https://www.drivethrurpg.com/en/product/231938/kids-on-bikes-core-rulebook"
+                           class="download-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Купить правила
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Сайт сделал Дурягин Егор. Все права защищены © 2025.
+        <button onclick="openForm()">Оставить отзыв</button>
+    </footer>
+
+    <div id="myForm" class="form-popup">
+        <form class="form-container">
+            <h2>Обратная связь</h2>
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Введите email" required>
+            <br>
+            <label for="message"><b>Сообщение</b></label>
+            <textarea placeholder="Ваше сообщение..." required></textarea>
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            document.body.classList.add("modal-open");
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("myForm")) {
+                closeForm();
+            }
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Системы НРИ</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #2c3e50, #3a536b, #54708e, #708dae );
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+    
+        .image-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+            .image-menu ul {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+                justify-content: center;
+            }
+
+            .image-menu a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                padding: 15px;
+                background: #f5f5f5;
+                border-radius: 10px;
+                transition: all 0.3s;
+            }
+
+            .image-menu img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 8px;
+            }
+
+            .image-menu span {
+                color: #2c3e50;
+                font-family: 'Oswald', serif;
+                font-size: 14px;
+            }
+
+            .image-menu a:hover {
+                background: #3498db;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+
+                .image-menu a:hover span {
+                    color: white;
+                }
+
+      
+
+        .home-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+            .home-button:hover {
+                transform: translateY(-3px);
+            }
+
+        .main-button img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        /* Контейнер для карточек */
+        .rule-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Расстояние между карточками */
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        /* Стили для каждой карточки */
+        .rule-card {
+            flex: 1 1 calc(33.33% - 20px); /* 3 карточки в ряд с учетом gap */
+            min-width: 300px; /* Минимальная ширина карточки */
+            max-width: 400px; /* Максимальная ширина */
+            display: flex;
+            flex-direction: column;
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid var(--main-color, #5e2d0b);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box; /* Чтобы padding не ломал расчеты */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .rule-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            }
+
+        .rule-card__image {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+            .rule-card__image img {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            }
+
+        .rule-card__content {
+            flex: 1;
+            
+        }
+
+        .rule-card__title {
+            color: #ffd700;
+            font-family: 'Pangolin', cursive;
+            margin: 0 0 15px 0;
+        }
+
+        .rule-card__desc {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        .rule-card__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .rule-card__btn {
+            background: #5e2d0b;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid #8b4513;
+        }
+
+            .rule-card__btn:hover {
+                background: #8b4513;
+                transform: translateY(-2px);
+            }
+    </style>
+
+</head>
+<body>
+    <div class="home-button">
+        <a href="../index.html" class="main-button">
+            <img src="img/icon-dnd.svg" alt="Главная">
+        </a>
+    </div>
+
+    <nav class="image-menu">
+        <ul>
+            <li><a href="base.html"><img src="img/system-icon.svg" alt="Основы"><span>Основы</span></a></li>
+            <li><a href="systems.html"><img src="img/site-icon.svg" alt="Системы"><span>Системы</span></a></li>
+            <li><a href="generators.html"><img src="img/chest-icon.svg" alt="Генератор"><span>Генератор</span></a></li>
+            <li><a href="download.html"><img src="img/cloud-icon.svg" alt="Загрузить"><span>Загрузить</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="rule-cards-container">
+        <!-- DnD -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/dnd-pic.jpg" alt="Dungeons & Dragons 5e">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">D&D 5th Edition</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+                <div class="rule-card__links">
+                    <a href="https://dungeonsanddragons.ru/bookfull/5ed/5e%20Players%20Handbook%20-%20Книга%20игрока%20RUS.pdf " target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://www.dndbeyond.com/srd" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://www.dndbeyond.com/" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pathfinder -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/pathfinder-cover.jpg" alt="Pathfinder">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">Pathfinder 2e</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+
+                <div class="rule-card__links">
+                    <a href="https://paizo.com/pathfinder" target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://pf2e-ru-translation.readthedocs.io/ru/latest/" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://2e.aonprd.com/?AspxAutoDetectCookieSupport=1" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+        <!-- Call of Cthulhu -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/cthulhu-cover.jpg" alt="Call of Cthulhu">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">Call of Cthulhu</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+
+                <div class="rule-card__links">
+                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://vk.com/call_of_cthulhu_rpg" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rule-cards-container">
+        <!-- Warhammer 40,000 Roleplay -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/waha-cover.jpg" alt="Warhammer 40,000 Roleplay">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">Warhammer 40,000 Roleplay</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+
+                <div class="rule-card__links">
+                    <a href="https://cubicle7games.com/warhammer-40-000-roleplay-imperium-maledictum?srsltid=AfmBOopa5eBnMOEvIDtCHLEznEWrA2wXEA5TSJWJIG597zl7NIGXbLhG" target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://rpg.fandom.com/ru/wiki/Warhammer_40K_Roleplay" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://cubicle7games.com/" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fate Core system -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/fate-cover.jpg" alt="Fate Core">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">Fate Core System</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+
+                <div class="rule-card__links">
+                    <a href="https://evilhat.com/product/fate-core-system/" target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://fate-srd.com/" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/3853/fate-core" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+        <!-- Kids on Bikes -->
+        <div class="rule-card">
+            <div class="rule-card__image">
+                <img src="img/bike-cover.jpg" alt="Kids on Bikes">
+            </div>
+            <div class="rule-card__content">
+                <h3 class="rule-card__title">Kids on Bikes</h3>
+                <p class="rule-card__desc">Официальные правила базовой механики и создания персонажей</p>
+
+                <div class="rule-card__links">
+                    <a href="https://www.drivethrurpg.com/en/product/231938/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">Основные правила </a>
+                    <a href="https://www.huntersentertainment.com/kidsonbikesrpg" target="_blank" class="rule-card__btn">SRD на русском</a>
+                    <a href="https://marketplace.roll20.net/browse/compendiumexpansion/4718/kids-on-bikes-core-rulebook" target="_blank" class="rule-card__btn">Онлайн-компендиум</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="footer.html"
+            style="width: 100%; border: none;"
+            id="footer-frame">
+    </iframe>
+</body>
+</html>

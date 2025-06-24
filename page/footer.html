@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+        footer {
+            margin-top: auto;
+            background: #333;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            margin: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            position: fixed;
+        }
+      
+    </style>
+
+</head>
+<body>
+    <footer>
+        Сайт сделал Дурягин Егор. Все права защищены © 2025.
+        
+    </footer>  
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const frame = document.getElementById('footer-frame');
+
+            // Обработчик загрузки контента в iframe
+            frame.addEventListener('load', function () {
+                try {
+                    const contentHeight = this.contentWindow.document.body.scrollHeight;
+                    this.style.height = contentHeight + 'px';
+                } catch (e) {
+                    console.error('Ошибка доступа к iframe:', e);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
